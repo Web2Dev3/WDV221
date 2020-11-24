@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>gallery.html</title>
+<!--Author: Savanna Kohler
+Date: March 12th 2020-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="about gardens">
+<meta name="keywords" content="lawns, photos">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+
+<link rel="stylesheet" type="text/css" href="css/boot-site.css">
+<link rel="stylesheet" type="text/css" href="scss/boot-site.scss">
+<link rel="stylesheet" type="text/css" href="scss/boot-site2.scss">
+<link rel="stylesheet" type="text/css" href="scss/boot-site.css">
+<link rel="stylesheet" type="text/css" href="scss/boot-site2.css">
+
+<link href="https://fonts.googleapis.com/css?family=Lobster+Two&display=swap" rel="stylesheet">
+
+<style>
+h3 {
+color:#ED79BE;
+}
+
+p{
+text-indent: 0px;
+text-align: center;
+}
+
+form {
+text-align: center;
+}
+
+img {
+border: none;
+}
+
+[alt~="spring"] {
+             border: 5px dashed #ED79BE;
+             border-radius: 2.8em;
+}
+
+[alt^="summer"] {
+             border: 2px solid #ED79BE;
+             border-radius: 3.8em;
+}
+
+[alt*="all"] {
+             border: 4px dotted white;
+	     border-radius: 2.8em;
+}
+
+[alt$="winter"] {
+             border: 6px dashed white;
+             border-radius: 3.8em;
+}
+
+p {
+color:indigo;
+}
+
+a {
+color:white;
+}
+</style>
+<script>
+function setCookie() {
+let now = new Date();
+now.setDate(now.getDate() + 7);
+let cookievalue = "BksXprs";
+
+document.cookie="Authenticated User=" + cookievalue;"expires=" + now + ";"
+
+}
+
+function setCookie2() {
+let now = new Date();
+now.setDate(now.getDate() + 7);
+let cookievalue = "BksXprs2";
+
+document.cookie="Authenticated User 2=" + cookievalue;"expires=" + now + ";"
+
+}
+
+function setCookie3() {
+let now = new Date();
+now.setDate(now.getDate() + 7);
+let cookievalue = "BksXprs3";
+
+document.cookie="Authenticated User 3=" + cookievalue;"expires=" + now + ";"
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+	document.getElementById('f1').addEventListener('mouseover', setCookie);
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+	document.getElementById('f2').addEventListener('mouseover', setCookie2);
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+	document.getElementById('f3').addEventListener('mouseover', setCookie3);
+});
+
+</script>
+</head>
+<body>
+
+<div class="container-fluid" style="box-shadow:5px 5px grey;">
+<div class="row" style="background-color:white;">
+	<div class="col-sm-12" style="background-color:indigo;">
+<nav class=" navbar navbar-expand-lg navbar-dark">
+	<a class="navbar-brand" href="index.html">
+	<img src="images/open-book.png" alt="logo for company" width="45" class="img-responsive" >BOOKS XPRESS
+	</a>
+	  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="facts.html">ABOUT</a>
+      </li> 
+        <li class="nav-item">
+        <a class="nav-link" href="gallery.html">PRODUCTS</a>
+      </li> 
+        <li class="nav-item">
+        <a class="nav-link" href="form.html">CONTACT</a>
+      </li> 
+    </ul>
+        <div class="d-flex ml-auto">
+                    <form class="form-inline">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+    </form>
+    <i class="fa fa-search" style="font-size: 2.13em; color: lavender; margin-left: 10px;"></i>
+  </div>
+  </div>
+</nav>
+</div>
+
+
+<div class="col-sm-12" style="background-color:white;">
+<h1 style="color:indigo;">Our Products</h1>
+<h2 style="color:indigo; text-align:center;">Academic Project</h2>
+</div>
+    <div class="col-lg-4" style="background-color:white;">
+    
+    <div class="card">
+  <img style="margin-left: -0px;" class="card-img-top" src="images/1.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Star Wars Millenium Falcon Reading Light- $15.00</h5>
+    <p class="card-text">Explore the Galaxy!</p>
+<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="XSSMB6DL7QVZS">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+  </div>
+</div>
+
+    <div class="card">
+  <img style="margin-left: -0px;" class="card-img-top" src="images/OIP.jpg" height="40%" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Anne of Green Gables Paperback- $4.99</h5>
+    <p class="card-text">Novel by Lucy Maud Montgomery</p>
+<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="M4PCBNJZ7U664">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+  </div>
+</div>
+
+    <div class="card">
+  <img style="margin-left: -0px;" class="card-img-top" src="images/Huck-Finn-1.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">The Adventures of Huckleberry Finn Hardback- $7.99</h5>
+    <p class="card-text">Novel by Mark Twain</p>
+<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="QAUTXRKJR3S8G">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+  </div>
+</div>
+
+    <div class="card">
+  <img style="margin-left: -0px;" class="card-img-top" src="images/carol.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">A Christmas Carol Ebook- $3.99</h5>
+    <p class="card-text">Story by Charles Dickens</p>
+<form id="f1" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="ZYT73BE29ZSJ2">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+<input type="hidden" name="return" value="http://savannakohler.com/WDV351/bootstrapSite/purchase2.html">
+</form>
+  </div>
+</div>
+
+</div>
+<div class="col-lg-4" style="background-color:white;">
+    <div class="card">
+  <img style="margin-left: -0px;" class="card-img-top" src="images/2.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Star Wars Light Saber Reading Light- $17.99</h5>
+    <p class="card-text">May the light be with you</p>
+<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="ZCL7F7SYCKYUC">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+  </div>
+</div>
+
+    <div class="card">
+  <img style="margin-left: -0px;" class="card-img-top" src="images/13167796.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">A Dog's Journey Paperback- $6.99</h5>
+    <p class="card-text">Book by W. Bruce Cameron</p>
+<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="KW3SAXNZ59XUE">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+  </div>
+</div>
+
+    <div class="card">
+  <img style="margin-left: -0px;" class="card-img-top" src="images/bridge-to-terabithia.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Bridge to Terabithia Hardback- $9.99</h5>
+    <p class="card-text">Novel by Katherine Paterson</p>
+<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="KM2NDV2GV4KA6">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+  </div>
+</div>
+
+    <div class="card">
+  <img style="margin-left: -0px;" class="card-img-top" src="images/grimm's complete fairy tales.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Grimm's Fairytales Ebook- $3.99</h5>
+    <p class="card-text">Stories by Jacob Grimm and Wilhelm Grimm</p>
+<form id="f2" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="TPRD578S5GVCY">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+<input type="hidden" name="return" value="http://savannakohler.com/WDV351/bootstrapSite/purchase1.html">
+</form>
+  </div>
+</div>
+
+</div>
+<div class="col-lg-4" style="background-color:white;">
+    <div class="card">
+  <img style="margin-left: -0px;" class="card-img-top" src="images/3.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Dinosaur Reading Light- $12.99</h5>
+    <p class="card-text">The cutest reading buddy!</p>
+<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="DDVGE4VRH5UWC">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+  </div>
+</div>
+
+    <div class="card">
+  <img style="margin-left: -0px;" class="card-img-top" src="images/Secret-Garden.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">The Secret Garden Paperback- $4.99</h5>
+    <p class="card-text">Novel by Frances Hodgson Burnett</p>
+<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="M4PCBNJZ7U664">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+  </div>
+</div>
+
+    <div class="card">
+  <img style="margin-left: -0px;" class="card-img-top" src="images/Treasure-Island.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Treasure Island Hardback- $7.99</h5>
+    <p class="card-text">Novel by Robert Louis Stevenson</p>
+<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="QAUTXRKJR3S8G">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+  </div>
+</div>
+
+    <div class="card">
+  <img style="margin-left: -0px;" class="card-img-top" src="images/frankenstein-book.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Frankenstein Ebook- $3.99</h5>
+    <p class="card-text">Novel by Mary Shelley</p>
+<form id="f3" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="JN88SDXDBWCZW">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+<input type="hidden" name="return" value="http://savannakohler.com/WDV351/bootstrapSite/purchase3.html">
+</form>
+  </div>
+</div>
+
+</div>
+
+<div class="col-sm-12" style="margin-top: 20px; color:white; background-color:indigo; display: flex; justify-content: space-between;">
+<p class="foot" style="color:white;">
+BOOKS EXPRESS <span>©Copyright 2020. All rights reserved.</span></p>
+<p class="foot" style="color:white;">
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-instagram"></a>
+</p>
+</div>
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>
