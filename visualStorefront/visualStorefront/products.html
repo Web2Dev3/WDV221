@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>gallery.html</title>
+	<title>productGallery.html</title>
 <!--Author: Savanna Kohler
-Date: March 12th 2020-->
+Date: December 2020-->
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -40,27 +40,7 @@ text-align: center;
 img {
 border: none;
 }
-
-[alt~="spring"] {
-             border: 5px dashed #ED79BE;
-             border-radius: 2.8em;
-}
-
-[alt^="summer"] {
-             border: 2px solid #ED79BE;
-             border-radius: 3.8em;
-}
-
-[alt*="all"] {
-             border: 4px dotted white;
-	     border-radius: 2.8em;
-}
-
-[alt$="winter"] {
-             border: 6px dashed white;
-             border-radius: 3.8em;
-}
-
+	
 p {
 color:indigo;
 }
@@ -69,46 +49,6 @@ a {
 color:white;
 }
 </style>
-<script>
-function setCookie() {
-let now = new Date();
-now.setDate(now.getDate() + 7);
-let cookievalue = "BksXprs";
-
-document.cookie="Authenticated User=" + cookievalue;"expires=" + now + ";"
-
-}
-
-function setCookie2() {
-let now = new Date();
-now.setDate(now.getDate() + 7);
-let cookievalue = "BksXprs2";
-
-document.cookie="Authenticated User 2=" + cookievalue;"expires=" + now + ";"
-
-}
-
-function setCookie3() {
-let now = new Date();
-now.setDate(now.getDate() + 7);
-let cookievalue = "BksXprs3";
-
-document.cookie="Authenticated User 3=" + cookievalue;"expires=" + now + ";"
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-	document.getElementById('f1').addEventListener('mouseover', setCookie);
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-	document.getElementById('f2').addEventListener('mouseover', setCookie2);
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-	document.getElementById('f3').addEventListener('mouseover', setCookie3);
-});
-
-</script>
 </head>
 <body>
 
