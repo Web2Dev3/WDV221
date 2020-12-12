@@ -53,6 +53,10 @@ function getCookie(cname) {
 }
 
 console.log(getCookie("Authenticated User 2"));
+	
+if (getCookie("Authenticated User 2") == "") {
+location.replace("gallery.html");
+}
 </script>
 
 </head>
