@@ -1,0 +1,22 @@
+/* Scss Document */
+
+$new-style: 2px solid maroon;
+$cool-color: lightcoral; 
+
+button, select {
+margin-bottom: 0.5em;
+background-color: $cool-color;
+border: $new-style;
+border-radius: 5px;
+color: white;
+}     
+
+nav a:hover  {
+          color: pink;
+          transform: rotateY(180deg);
+          }
+  
+nav {
+@extend nav a:hover;
+font-weight: bolder;
+}

@@ -1,0 +1,84 @@
+button, select {
+margin-bottom: 0.5em;
+background-color: lightcoral;
+border: 2px solid maroon;
+border-radius: 5px;
+color: white;
+}     
+
+nav a:hover  {
+          color: pink;
+          transform: rotateY(180deg);
+          font-weight: bolder;
+          }
+          
+body {
+	 background-color: blanchedalmond;
+         background-repeat: repeat;
+         width: 100%;
+}
+
+h1, h3 {
+          font-family: Georgia, serif;
+          color:maroon;
+          padding: .5em;
+          font-size: 2.1em;
+          font-weight: bold;
+ 	  text-shadow: 1px 1px black;
+         }
+
+nav ul {
+  width:100%;
+  justify-content: center;
+  justify-content:flex-end;
+  padding: .5em;
+  text-decoration: none;
+  text-align: center;
+}
+
+li {
+	display:inline-block;
+	font-weight: bold;
+}
+
+.navbar-brand {
+font-family: 'Sansita Swashed', cursive;
+}
+
+nav a  {
+	transition:transform 2s;
+	}           
+
+button:hover, select:hover {
+background-color: maroon;
+}
+
+div p {
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:1.2em;
+   line-height:1.5;
+   padding: .5em;
+   margin: .5em;
+   color: darkred;
+   }
+   
+#submit {
+margin-bottom: 0.5em;
+background-color: lightcoral;
+border: 2px solid maroon;
+border-radius: 5px;
+color: white;
+}
+
+#submit:hover {
+background-color: maroon;
+}
+
+div form {
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:1.2em;
+   line-height:1.5;
+   padding: .5em;
+   margin: .5em;
+   color: darkred;
+   }

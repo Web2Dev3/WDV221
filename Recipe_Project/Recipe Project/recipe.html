@@ -1,0 +1,749 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WDV321 Advanced Javascript Recipe Page</title>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="objectRecipe.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="css/recipe.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap" rel="stylesheet">
+
+<script>				
+function decimalToFraction(value, donly = true) {
+  var tolerance = 1.0E-6; // from how many decimals the number is rounded
+  var h1 = 1;
+  var h2 = 0;
+  var k1 = 0;
+  var k2 = 1;
+  var negative = false;
+  var i;
+
+  if (parseInt(value) == value) { // if value is an integer, stop the script
+    return value;
+  } else if (value < 0) {
+    negative = true;
+    value = -value;
+  }
+
+  if (donly) {
+    i = parseInt(value);
+    value -= i;
+  }
+
+  var b = value;
+
+  do {
+    var a = Math.floor(b);
+    console.log(a)
+    var aux = h1;
+    h1 = a * h1 + h2;
+    h2 = aux;
+    aux = k1;
+    k1 = a * k1 + k2;
+    k2 = aux;
+    b = 1 / (b - a);
+  } while (Math.abs(value - h1 / k1) > value * tolerance);
+
+  return (negative ? "-" : '') + ((donly & (i != 0)) ? i + ' ' : '') + (h1 == 0 ? '' : h1 + "/" + k1);
+}		
+
+$(document).ready(function() {
+
+	$("#local").css("display", "none");
+	$("#loc1").css("display", "none");
+	$("#loc2").css("display", "none");
+	$("#loc3").css("display", "none");
+	$("#dir4").css("display", "none");
+	$("#button1").css("display", "none");
+	$("#button2").css("display", "none");
+        $("#2").css("display", "none");
+	$("#3").css("display", "none");
+	$("#1").delay(1800).slideDown("slow");
+	$("#serve1").css("display", "none");
+ 	$("#serve2").css("display", "none");
+	$("#serve3").css("display", "none");
+	$("#serve4").css("display", "none");
+	$("#4").css("display", "none");
+	$("#5").css("display", "none");
+	$("#6").css("display", "none");
+	$("#7").css("display", "none");
+	$("#8").css("display", "none");
+	$("#9").css("display", "none");
+	$("#10").css("display", "none");
+	$("#11").css("display", "none");
+	$("#12").css("display", "none");
+	$("#13").css("display", "none");
+        $("#rec1").fadeIn(800);
+        $("#rec2").css("display", "none");
+        $("#rec3").css("display", "none");
+        $("#dir1").delay(2800).slideDown("slow");
+        $("#dir2").css("display", "none");
+        $("#dir3").css("display", "none");
+        $("#foot").css("display", "block");
+        
+    $('#chooseRecipe').change(function() {
+        $("#foot").css("display", "none");
+	let dataValue=document.getElementById('chooseRecipe').value;
+	if(dataValue==0){
+	$("#rec1").delay(800).fadeIn(800);
+	$("#serve1").slideDown("slow");
+	$("#1").delay(1800).slideDown("slow");
+	$("#2").css("display", "none");
+	$("#3").css("display", "none");
+	$("#4").css("display", "none");
+	$("#5").css("display", "none");
+	$("#6").css("display", "none");
+	$("#7").css("display", "none");
+	$("#8").css("display", "none");
+	$("#9").css("display", "none");
+	$("#10").css("display", "none");
+	$("#11").css("display", "none");
+	$("#12").css("display", "none");
+	$("#13").css("display", "none");
+	$("#local").css("display", "none");
+	$("#loc1").css("display", "none");
+	$("#loc2").css("display", "none");
+	$("#loc3").css("display", "none");
+	$("#rec3").css("display", "none");
+	$("#rec2").css("display", "none");
+	$("#serve2").css("display", "none");
+	$("#serve3").css("display", "none");
+	$("#serve4").css("display", "none");
+	$("#button1").delay(400).slideDown("slow");
+	$("#button2").delay(400).slideDown("slow");
+	$("#dir1").delay(2800).slideDown("slow");
+	$("#dir2").css("display", "none");
+        $("#dir3").css("display", "none");
+        $("#dir4").css("display", "none");
+        $("#foot").delay(3800).slideDown("slow");
+
+
+    }
+    else if(dataValue==1){
+	$("#serve2").slideDown("slow");
+	$("#rec2").delay(800).fadeIn(800);
+	$("#4").delay(1800).slideDown("slow");
+	$("#2").css("display", "none");
+	$("#3").css("display", "none");
+	$("#1").css("display", "none");
+	$("#5").css("display", "none");
+	$("#6").css("display", "none");
+	$("#7").css("display", "none");
+	$("#8").css("display", "none");
+	$("#9").css("display", "none");
+	$("#10").css("display", "none");
+	$("#11").css("display", "none");
+	$("#12").css("display", "none");
+	$("#13").css("display", "none");
+	$("#local").css("display", "none");
+	$("#loc1").css("display", "none");
+	$("#loc2").css("display", "none");
+	$("#loc3").css("display", "none");
+	$("#rec3").css("display", "none");
+	$("#rec1").css("display", "none");
+	$("#serve1").css("display", "none");
+	$("#serve3").css("display", "none");
+	$("#serve4").css("display", "none");
+	$("#button1").delay(400).slideDown("slow");
+	$("#button2").delay(400).slideDown("slow");
+        $("#dir2").delay(2800).slideDown("slow");
+        $("#dir1").css("display", "none");
+        $("#dir3").css("display", "none");
+        $("#dir4").css("display", "none");
+      	$("#foot").delay(3800).slideDown("slow");
+
+    }
+    else if(dataValue==2){
+	$("#serve3").slideDown("slow");
+	$("#rec3").delay(800).fadeIn(800);
+	$("#7").delay(1800).slideDown("slow");
+	$("#2").css("display", "none");
+	$("#3").css("display", "none");
+	$("#1").css("display", "none");
+	$("#5").css("display", "none");
+	$("#6").css("display", "none");
+	$("#4").css("display", "none");
+	$("#8").css("display", "none");
+	$("#9").css("display", "none");
+	$("#10").css("display", "none");
+	$("#11").css("display", "none");
+	$("#12").css("display", "none");
+	$("#13").css("display", "none");
+	$("#local").css("display", "none");
+	$("#loc1").css("display", "none");
+	$("#loc2").css("display", "none");
+	$("#loc3").css("display", "none");
+	$("#rec2").css("display", "none");
+	$("#rec1").css("display", "none");
+        $("#serve4").css("display", "none");
+	$("#serve2").css("display", "none");
+	$("#serve1").css("display", "none");
+	$("#button1").delay(400).slideDown("slow");
+	$("#button2").delay(400).slideDown("slow");
+        $("#dir3").delay(2800).slideDown("slow");
+        $("#dir1").css("display", "none");
+        $("#dir2").css("display", "none");
+        $("#dir4").css("display", "none");
+      	$("#foot").delay(3800).slideDown("slow");
+    }
+    else {	
+    	$("#local").delay(800).fadeIn(800);
+	$("#loc1").delay(1800).slideDown("slow");
+	$("#loc2").css("display", "none");
+	$("#loc3").css("display", "none");
+	$("#2").css("display", "none");
+	$("#3").css("display", "none");
+	$("#1").css("display", "none");
+	$("#5").css("display", "none");
+	$("#6").css("display", "none");
+	$("#7").css("display", "none");
+	$("#8").css("display", "none");
+	$("#9").css("display", "none");
+	$("#10").css("display", "none");
+	$("#11").css("display", "none");
+	$("#12").css("display", "none");
+	$("#13").css("display", "none");
+	$("#4").css("display", "none");
+	$("#rec2").css("display", "none");
+	$("#rec3").css("display", "none");
+	$("#rec1").css("display", "none");
+	$("#dir4").delay(2800).slideDown("slow");
+	$("#dir2").css("display", "none");
+        $("#dir3").css("display", "none");
+        $("#dir1").css("display", "none");
+	$("#button1").delay(400).slideDown("slow");
+	$("#button2").delay(400).slideDown("slow");
+	$("#serve1").css("display", "none");
+ 	$("#serve2").css("display", "none");
+	$("#serve3").css("display", "none");
+	$("#serve4").slideDown("slow");
+      	$("#foot").delay(3800).slideDown("slow");
+    }
+  });
+        
+  $('#servingSize').change(function() {
+	let dataValue=document.getElementById('servingSize').value;
+	if(dataValue==0){
+	$("#dir1").delay(800).slideDown("slow");
+	$("#3").slideDown("slow");
+	$("#2").css("display", "none");
+	$("#1").css("display", "none");
+	$("#10").css("display", "none");
+    }
+    else if(dataValue==1){
+	$("#dir1").delay(800).slideDown("slow");
+        $("#1").slideDown("slow");
+        $("#2").css("display", "none");
+	$("#3").css("display", "none");
+	$("#10").css("display", "none");
+    }
+    else if(dataValue==2){
+	$("#dir1").delay(800).slideDown("slow");
+	$("#2").slideDown("slow");
+	$("#10").css("display", "none");
+	$("#3").css("display", "none");
+	$("#1").css("display", "none");
+    }
+    else {
+	$("#dir1").delay(800).slideDown("slow");
+	$("#10").slideDown("slow");
+	$("#2").css("display", "none");
+	$("#3").css("display", "none");
+	$("#1").css("display", "none");
+    }
+  });   
+  
+   $('#servingSize2').change(function() {
+	let dataValue=document.getElementById('servingSize2').value;
+	if(dataValue==0){
+	$("#dir2").delay(800).slideDown("slow");
+	$("#6").slideDown("slow");
+	$("#4").css("display", "none");
+	$("#5").css("display", "none");
+	$("#11").css("display", "none");
+    }
+    else if(dataValue==1){
+	$("#dir2").delay(800).slideDown("slow");
+        $("#4").slideDown("slow");
+        $("#6").css("display", "none");
+	$("#5").css("display", "none");
+	$("#11").css("display", "none");
+    }
+    else if(dataValue==2){
+	$("#dir2").delay(800).slideDown("slow");
+	$("#5").slideDown("slow");
+	$("#4").css("display", "none");
+	$("#6").css("display", "none");
+	$("#11").css("display", "none");
+    }
+    else {
+	$("#dir2").delay(800).slideDown("slow");
+	$("#11").slideDown("slow");
+	$("#4").css("display", "none");
+	$("#5").css("display", "none");
+	$("#6").css("display", "none");
+    }
+  });         
+ 
+  $('#servingSize3').change(function() {
+	let dataValue=document.getElementById('servingSize3').value;
+	if(dataValue==0){
+	$("#dir3").delay(800).slideDown("slow");
+	$("#9").slideDown("slow");
+	$("#7").css("display", "none");
+	$("#8").css("display", "none");
+	$("#12").css("display", "none");
+    }
+    else if(dataValue==1){
+	$("#dir3").delay(800).slideDown("slow");
+        $("#7").slideDown("slow");
+        $("#9").css("display", "none");
+	$("#8").css("display", "none");
+	$("#12").css("display", "none");
+    }
+    else if(dataValue==2){
+	$("#dir3").delay(800).slideDown("slow");
+	$("#8").slideDown("slow");
+	$("#7").css("display", "none");
+	$("#9").css("display", "none");
+	$("#12").css("display", "none");
+    }
+    else {
+	$("#dir3").delay(800).slideDown("slow");
+	$("#12").slideDown("slow");
+	$("#7").css("display", "none");
+	$("#8").css("display", "none");
+	$("#9").css("display", "none");
+    }
+  });
+  
+  $('#servingSize4').change(function() {
+	let dataValue=document.getElementById('servingSize4').value;
+	if(dataValue==0){
+	$("#dir4").delay(800).slideDown("slow");
+	$("#loc3").slideDown("slow");
+	$("#loc1").css("display", "none");
+	$("#loc2").css("display", "none");
+	$("#13").css("display", "none");
+    }
+    else if(dataValue==1){
+	$("#dir4").delay(800).slideDown("slow");
+        $("#loc1").slideDown("slow");
+        $("#loc3").css("display", "none");
+	$("#loc2").css("display", "none");
+	$("#13").css("display", "none");
+    }
+    else if(dataValue==2){
+	$("#dir4").delay(800).slideDown("slow");
+	$("#loc2").slideDown("slow");
+	$("#loc1").css("display", "none");
+	$("#loc3").css("display", "none");
+	$("#13").css("display", "none");
+    }
+    else {
+	$("#dir4").delay(800).slideDown("slow");
+	$("#13").slideDown("slow");
+	$("#loc1").css("display", "none");
+	$("#loc2").css("display", "none");
+	$("#loc3").css("display", "none");
+    }
+  });
+  
+  
+   $('#button1').click(function() {
+   	$("#1").slideUp("slow");
+	$("#2").slideUp("slow");
+	$("#3").slideUp("slow");
+   	$("#4").slideUp("slow");
+	$("#5").slideUp("slow");
+	$("#6").slideUp("slow");
+	$("#7").slideUp("slow");
+	$("#8").slideUp("slow");
+	$("#9").slideUp("slow");
+	$("#10").slideUp("slow");
+	$("#11").slideUp("slow");
+	$("#12").slideUp("slow");
+	$("#13").slideUp("slow");
+	$("#loc1").slideUp("slow");
+	$("#loc2").slideUp("slow");
+	$("#loc3").slideUp("slow");
+   
+     });
+     
+     $('#button2').click(function() {
+        $("#dir1").slideUp("slow");
+        $("#dir2").slideUp("slow");
+        $("#dir3").slideUp("slow");
+        $("#dir4").slideUp("slow");
+   
+     });
+        
+  
+});
+
+r = JSON.parse(localStorage.getItem('New_Recipes'));
+
+s = JSON.parse(localStorage.getItem('New_Ingredients'));
+
+t = JSON.parse(localStorage.getItem('New_Directions'));
+
+</script>
+
+
+
+
+</head>
+
+<body>
+<div class="container-fluid">
+<div class="row">
+<div class="col-lg-12" style="background-color: maroon;">
+<nav class="navbar navbar-expand-md navbar-dark">
+ 
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+<a class="navbar-brand" href="recipe.html">
+	Recipe Manager
+	</a>
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="recipe.html">Our Recipes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="recipeInput.php">Upload A Recipe</a>
+      </li>
+    </ul>
+  </div> 
+</nav>
+</div>
+
+<div class="col-lg-12" style="background-color:maroon">
+    <select name="chooseRecipe" id="chooseRecipe">
+     <option>Please select a Recipe</option>
+      <option value="0">CrockPot Chili</option>
+      <option value="1">Easy Tuna Casserole</option>
+      <option value="2">Smoked Cheese Ravioli</option>
+      <option value="3">Your Own Recipe(Upload a recipe first!)</option>
+    </select>
+    </div>
+<div class="col-lg-12" style="background-image: url(background.jpg);height:50vh;min-height:20px; background-size:cover;background-repeat: no-repeat;"></div>  
+    <div class="col-lg-6">
+<br>
+<div id="serve1">
+    <select name="servingSize" id="servingSize">
+     <option>Please select a Serving size</option>
+      <option value="0">3 Servings</option>
+      <option value="1">6 Servings</option>
+      <option value="2">12 Servings</option>
+      <option value="3">18 Servings</option>
+    </select>
+    </div>
+    
+    <div id="serve2">
+    <select name="servingSize2" id="servingSize2">
+     <option>Please select a Serving size</option>
+      <option value="0">4 Servings</option>
+      <option value="1">8 Servings</option>
+      <option value="2">16 Servings</option>
+      <option value="3">24 Servings</option>
+    </select>
+    </div>
+    
+    <div id="serve3">
+    <select name="servingSize3" id="servingSize3">
+     <option>Please select a Serving size</option>
+      <option value="0">2 Servings</option>
+      <option value="1">4 Servings</option>
+      <option value="2">8 Servings</option>
+      <option value="3">12 Servings</option>      
+    </select>
+    </div>
+    
+     <div id="serve4">
+    <select name="servingSize4" id="servingSize4">
+     <option>Please select a Serving size</option>
+      <option value="0">Half Serving Size</option>
+      <option value="1">Original Serving Size</option>
+      <option value="2">Double Serving Size</option>
+      <option value="3">Triple Serving Size</option>      
+    </select>
+    </div>
+    
+
+<div id="rec1" style="display:none;">
+<p>
+<script>
+	document.write('<h1>'+recipe1.Name+'</h1>' + "<br>" + '<img src="'+recipe1.Image+'" width="55%">' + "<br><span style='font-weight: bold; color: maroon; font-size: 1.1em;'>" + recipe1.Prep + "<br>" + recipe1.Cooking + "<br>" + recipe1.Difficulty + "<br></span>");
+</script>
+</p>
+</div>
+
+<div id="rec2">
+<p>
+<script>
+	document.write('<h1>'+recipe2.Name+'</h1>' + "<br>" + '<img src="'+recipe2.Image+'" width="55%">' + "<br><span style='font-weight: bold; color: maroon; font-size: 1.1em;'>" + recipe2.Prep + "<br>" + recipe2.Cooking + "<br>" + recipe2.Difficulty + "<br></span>");
+</script>
+</p>
+</div>
+
+<div id="rec3">
+<p>
+<script>
+	document.write('<h1>'+recipe3.Name+'</h1>' + "<br>" + '<img src="'+recipe3.Image+'" width="55%">' + "<br><span style='font-weight: bold; color: maroon; font-size: 1.1em;'>" + recipe3.Prep + "<br>" + recipe3.Cooking + "<br>" + recipe3.Difficulty + "<br></span>");
+</script>
+</p>
+</div>
+
+<div id="local">
+<p>
+<script>
+	document.write('<h1>'+r[0].title+'</h1>' + "<br>" + '<img src="uploads/'+r[0].image+'" width="65%">' + "<br><span style='font-weight: bold; color: maroon; font-size: 1.1em;'>" + "Preparation: " + r[0].prep + "<br>" + "Cook Time: " + r[0].cook + "<br>" + "Difficulty: " + r[0].difficulty + "<br>" + "Serves " + r[0].servings + "<br></span>");
+
+</script>
+</p>
+</div>
+</div>
+
+<div class="col-lg-3">
+<h3>Ingredients</h3>
+<button type="button" id="button1">Close Ingredient List</button>
+  
+<div id="1" style="display:none;">
+<p>
+<script>
+let x;
+for(x=0;x<Ingredients1.length;x++) {
+	document.write(decimalToFraction(Ingredients1[x].quantity) + "<br>" + Ingredients1[x].ingredient + "<br>");
+}
+</script>
+</p>
+</div>
+
+<div id="2">
+<p>
+<script>
+let y;
+for(y=0;y<Ingredients1.length;y++) {
+	document.write(decimalToFraction(Ingredients1[y].quantity*2) + "<br>" + Ingredients1[y].ingredient + "<br>");
+}
+</script>
+<p>
+</div>
+
+<div id="3">
+<p>
+<script>
+let z;
+for(z=0;z<Ingredients1.length;z++) {
+	document.write(decimalToFraction(Ingredients1[z].quantity/2) + "<br>" + Ingredients1[z].ingredient + "<br>");
+}
+</script>
+</p>
+</div>
+
+<div id="10">
+<p>
+<script>
+let u;
+for(u=0;u<Ingredients1.length;u++) {
+	document.write(decimalToFraction(Ingredients1[u].quantity*3) + "<br>" + Ingredients1[u].ingredient + "<br>");
+}
+</script>
+</p>
+</div>
+
+<div id="7">
+<p>
+<script>
+let a;
+for(a=0;a<Ingredients3.length;a++) {
+	document.write(decimalToFraction(Ingredients3[a].quantity) + "<br>" + Ingredients3[a].ingredient + "<br>");
+}
+</script>
+</p>
+</div>
+
+<div id="8">
+<p>
+<script>
+let b;
+for(b=0;b<Ingredients3.length;b++) {
+	document.write(decimalToFraction(Ingredients3[b].quantity*2) + "<br>" + Ingredients3[b].ingredient + "<br>");
+}
+</script>
+</p>
+</div>
+
+<div id="9">
+<p>
+<script>
+let c;
+for(c=0;c<Ingredients3.length;c++) {
+	document.write(decimalToFraction(Ingredients3[c].quantity/2) + "<br>" + Ingredients3[c].ingredient + "<br>");
+}
+</script>
+</p>
+</div>
+
+<div id="12">
+<p>
+<script>
+let e;
+for(e=0;e<Ingredients3.length;e++) {
+	document.write(decimalToFraction(Ingredients3[e].quantity*3) + "<br>" + Ingredients3[e].ingredient + "<br>");
+}
+</script>
+</p>
+</div>
+
+<div id="4">
+<p>
+<script>
+let i;
+for(i=0;i<Ingredients2.length;i++) {
+	document.write(decimalToFraction(Ingredients2[i].quantity) + "<br>" + Ingredients2[i].ingredient + "<br>");
+}
+</script>
+</p>
+</div>
+
+<div id="5">
+<p>
+<script>
+let j;
+for(j=0;j<Ingredients2.length;j++) {
+	document.write(decimalToFraction(Ingredients2[j].quantity*2) + "<br>" + Ingredients2[j].ingredient + "<br>");
+}
+</script>
+</p>
+</div>
+
+<div id="6">
+<p>
+<script>
+let k;
+for(k=0;k<Ingredients2.length;k++) {
+	document.write(decimalToFraction(Ingredients2[k].quantity/2) + "<br>" + Ingredients2[k].ingredient + "<br>");
+}
+</script>
+</p>
+</div>
+
+<div id="11">
+<p>
+<script>
+let f;
+for(f=0;f<Ingredients2.length;f++) {
+	document.write(decimalToFraction(Ingredients2[f].quantity*3) + "<br>" + Ingredients2[f].ingredient + "<br>");
+}
+</script>
+</p>
+</div>
+
+<div id="loc1">
+<p>
+<script>
+let n;
+for(n=0;n<s.length;n++) {
+	document.write(decimalToFraction(s[n].quantity) + "<br>" + s[n].ingredients + "<br>");
+}
+</script>
+</p>
+</div>
+
+<div id="loc2">
+<p>
+<script>
+let o;
+for(o=0;o<s.length;o++) {
+	document.write(decimalToFraction(s[o].quantity*2) + "<br>" + s[o].ingredients + "<br>");
+}
+</script>
+</p>
+</div>
+
+<div id="loc3">
+<p>
+<script>
+let p;
+for(p=0;p<s.length;p++) {
+	document.write(decimalToFraction(s[p].quantity/2) + "<br>" + s[p].ingredients + "<br>");
+}
+</script>
+</p>
+</div>
+
+<div id="13">
+<p>
+<script>
+let h;
+for(h=0;h<s.length;h++) {
+	document.write(decimalToFraction(s[h].quantity*3) + "<br>" + s[h].ingredients + "<br>");
+}
+</script>
+</p>
+</div>
+</div>
+
+<div class="col-lg-3">
+
+<h3 id="dir">Directions</h3>
+   <button type="button" id="button2">Close Directions</button>
+
+<div id="dir1" style="display:none;">
+<p>
+<script>
+    	document.write(directions1.step1 + "<br>" + directions1.step2 + "<br>" + directions1.step3 + "<br>" + directions1.step4 + "<br>" + directions1.step5 + "<br>" + directions1.step6 + "<br>" + directions1.step7 + "<br>" + directions1.step8 + "<br>" + directions1.step9 + "<br>");
+</script>
+</p>
+</div>
+
+<div id="dir2">
+<p>
+<script>
+    	document.write(directions2.step1 + "<br>" + directions2.step2 + "<br>" + directions2.step3 + "<br>");
+</script>
+</p>
+</div>
+
+<div id="dir3">
+<p>
+<script>
+    	document.write(directions3.step1 + "<br>" + directions3.step2 + "<br>");
+</script>
+</p>
+</div>
+<div id="dir4">
+<p>
+<script>
+let q;
+for(q=0;q<t.length;q++) {
+	document.write(t[q].directions + "<br>");
+}
+</script>
+</p>
+</div>
+</div>
+<div id="foot" class="col-sm-12" style="color:white; background-color: maroon;">
+<p style="color:white;">©Copyright 2020 Recipe Manager. All rights reserved.
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-instagram"></a>
+</p>
+</div>
+</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
