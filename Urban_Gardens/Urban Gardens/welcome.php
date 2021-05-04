@@ -29,12 +29,32 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         body{ font: 14px sans-serif; text-align: center; margin: auto; width: 97.5%;}
         .btn{padding-right: 10px; padding-left: 0px; background-color: coral;}
 	a {color: white; font-weight: bold;}
-         @media screen and (max-width: 1024px) {
+         
+	@media screen and (max-width: 1024px) {
          ul {
          flex-direction: column;
          }
         body{ font: 14px sans-serif; text-align: center; margin: auto; width: 93.5%;}
-}
+	}
+	    
+      @media screen and (max-width: 550px) {
+  	body{width: 100%;}
+  	input {width: 90%;}
+      }
+
+     @media screen and (max-width: 524px) {
+ 	.btn{padding-right: 20px; padding-left: 10px; margin-bottom: 10px; background-color: coral; text-align: center; width: 80%;}
+ 	.logout{margin-left: 20px;}
+     }
+
+  
+     @media screen and (max-width: 290px) {
+      .navbar-brand {
+      font-size: 1.1em;
+      padding: 0px;
+      margin: 0px;
+      }
+    }
     </style>
 </head>
 <body>
@@ -70,7 +90,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <p><a href="upload.php">Click here</a> to upload an image.</p>   
     <p>
     	<a href="index.html" class="btn btn-danger">Return to Main Site</a>
-        <a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>
+        <a href="logout.php" class="btn btn-danger logout">Sign Out of Your Account</a>
     </p>
     </div>
     <div class="col-lg-12" style="color:white; background-image: linear-gradient(to bottom left, #128A42, #00621C);">
