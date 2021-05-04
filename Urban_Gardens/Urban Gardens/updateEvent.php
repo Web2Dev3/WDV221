@@ -454,12 +454,45 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 margin: 30px;
 padding-right: 110px;
 padding-bottom: 25px;
+background-color: green;
 }
 
 #submit {
-border: darkgreen;
+border: 3px dotted darkred;
 border-radius: 25px;
 padding-bottom: 0px;
+background-color: green;
+}
+
+#updateEventForm {
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+width: 70%;
+font-size: 1.0em;
+margin-top: 30px;
+margin-bottom: 30px;
+background-color: #00621C;
+border-radius: 30px;
+box-shadow: 2px 2px 5px black;
+padding-top: 10px;
+padding-bottom: 5px;
+}
+
+.col1 {
+display: inline-block;
+width: 36%;
+margin: 15px;
+}
+
+.col2 {
+display: inline-block;
+width: 36%;
+margin: 15px;
+}
+
+label {
+margin-right: 35px;
 }
 
 body {
@@ -471,8 +504,34 @@ width: 97.5%;
 }
 
   @media screen and (max-width: 1024px) {
-  body{width: 93.7%;}
+  body{width: 99%;}
+  .navbar {display: none;}
+  .col1, .col2 {
+      display: block;
+      width: 90%;
+   }
   }
+  
+  @media screen and (max-width: 550px) {
+  body{width: 100%;}
+  input, #button2 {width: 90%;}
+  #button2 {margin-left: 23px; padding-left: 90px;}
+  #updateEventForm {width: 100%;}
+  }
+  
+  @media screen and (max-width: 330px) {
+  #button2 {margin-left: 23px; padding-left:55px;}
+  .col1, .col2 {
+      display: block;
+      width: 100%;
+      margin: 0px;
+   }
+  }
+  
+   @media screen and (max-width: 290px) {
+   .navbar-brand {font-size: 1.2em;}
+    h1 {margin-left: 10px;}
+   }
 
 </style>
 
@@ -539,49 +598,71 @@ width: 97.5%;
         <form id="updateEventForm" name="updateEventForm" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) . "?recId=$updateRecID"; ?>">
         	<fieldset>
    
-             <p>Product Name: 
+              <div class="col1">
+  <p><label for="prodName">Product Name:</label> 
     <input type="text" name="eventName" id="eventName" value="<?php echo $prod_name;  ?>" required/>
     <span class="errMsg"> <?php echo $eventNameErrMsg; ?></span>
 </p>
-  <p>Product Description: 
+</div>
+<div class="col1">
+  <p><label for="prodDesc">Product Description:</label> 
     <input type="text" name="eventDesc" id="eventDesc" value="<?php echo $prod_description;  ?>" required/>
     <span class="errMsg"> <?php echo $eventDescErrMsg; ?></span>
   </p>
-  <p>Product Price: 
+  </div>
+  <div class="col1">
+  <p><label for="prodPrice">Product Price:</label>
     <input type="text" name="price" id="price" value="<?php echo $prod_price;  ?>" required/>
     <span class="errMsg"> <?php echo $priceErrMsg; ?></span>
   </p>
-  <p>Product Image: 
+  </div>
+  <div class="col1">
+  <p><label for="prodImg">Product Image:</label> 
     <input type="text" name="img" id="img" value="<?php echo $prod_image;  ?>" required/>
     <span class="errMsg"> <?php echo $imgErrMsg; ?></span>
   </p>
-    <p>Product Tax: 
+  </div>
+  <div class="col1">
+    <p><label for="prodTax">Product Tax:</label> 
     <input type="text" name="tax" id="tax" value="<?php echo $prod_tax;  ?>"/>
     <span class="errMsg"> <?php echo $taxErrMsg; ?></span>
   </p>
-    <p>Product Shipping: 
+  </div>
+  <div class="col1">
+    <p><label for="prodShip">Product Shipping: </label> 
     <input type="text" name="ship" id="ship" value="<?php echo $prod_shipping;  ?>"/>
     <span class="errMsg"> <?php echo $shipErrMsg; ?></span>
   </p>
-  <p>Product WholeSaler: 
+  </div>
+  <div class="col2">
+  <p><label for="prodSale">Product WholeSaler: </label> 
     <input type="text" name="sell" id="sell" value="<?php echo $prod_seller;  ?>"/>
     <span class="errMsg"> <?php echo $sellerErrMsg; ?></span>
   </p>
-  <p>Product Category: 
+  </div>
+  <div class="col2">
+  <p><label for="prodCat">Product Category: </label> 
     <input type="text" name="cat" id="cat" value="<?php echo $prod_category;  ?>" required/>
     <span class="errMsg"> <?php echo $categoryErrMsg; ?></span>
   </p>
-    <p>Product Special Message(optional): 
+  </div>
+  <div class="col2">
+    <p><label for="prodMsg">Product Special Message(optional):</label>  
     <input type="text" name="spec" id="spec" value="<?php echo $prod_special;  ?>"/>
   </p>
-    <p>Product Date: 
+  </div>
+  <div class="col2">
+    <p><label for="prodDate">Product Date: </label> 
     <input type="date" name="date" id="date" value="<?php echo $prod_date;  ?>"/>
     <span class="errMsg"> <?php echo $dateErrMsg; ?></span>
   </p>
-  <p>Product Inventory: 
+  </div>
+  <div class="col2">
+  <p><label for="prodInv">Product Inventory:</label>  
     <input type="number" name="number" id="number" value="<?php echo $prod_inventory;  ?>" required/>
     <span class="errMsg"> <?php echo $inventoryErrMsg; ?></span>
   </p>
+  </div>
                        
               
           </fieldset>
