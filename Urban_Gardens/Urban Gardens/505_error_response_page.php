@@ -32,39 +32,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <body>
 <div id="container-fluid">
 <div class="row">
-<div class="col-sm-1" style="background-color:#34590A;">
-	<a class="navbar-brand" href="#">
-	<img src="images/urban-logo.png" alt="logo for company">
+<div class="col-sm-12" style="background-color:#34590A;">
+	<a style="color: white; font-weight: bold;" class="navbar-brand" href="#">
+	<img style="max-width: 70px; max-height: 80px; border: none;" src="images/urban-logo.png" alt="logo for company">Urban Gardens Admin
 	</a>
-	</div>
-	<div class="col-sm-11" style="background-color:#34590A;">
-<nav class=" navbar navbar-expand-lg navbar-dark">
-  <!-- Navbar links -->
-  <div class="collapse navbar-collapse" id="collapsibleNavbar2">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="welcome.php">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="inputForm.php">Add Products</a>
-      </li> 
-        <li class="nav-item">
-        <a class="nav-link" href="listevents.php">Edit Products</a>
-      </li> 
- 
-    </ul>
-        </div>
-        <div class="d-flex ml-auto">
-                    <form class="form-inline">
-      <input class="form-control ml-sm-5" type="search" placeholder="Search" aria-label="Search">
-    </form>
-    <i class="fa fa-search" style="font-size: 2.13em; color: green; margin-left: 10px;"></i>
-  <!-- Toggler/collapsibe Button -->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".collapse" aria-controls="collapsibleNavbar collapsibleNavbar2">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  </div>
-</nav>
 </div>
 
 <div class="col-lg-12">
@@ -76,4 +47,3 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     </div>
 </body>
 </html>
-<html>
