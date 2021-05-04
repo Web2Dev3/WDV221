@@ -28,9 +28,33 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <style type="text/css">
         body{ font: 14px sans-serif; text-align: center;  margin: auto; 
  width: 97.5%;}
+	    
+.submit, input::-webkit-file-upload-button {
+  background-color: coral;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  }
+  
+  input {
+  font-weight: bold;
+  }
+	    
   @media screen and (max-width: 1024px) {
   body{width: 93.5%;}
+ .navbar {display: none;}
   }
+  
+    @media screen and (max-width: 550px) {
+  body{width: 100%;}
+  input {width: 90%;}
+  }
+  
+   @media screen and (max-width: 290px) {
+   .navbar-brand {
+   font-size: 1.3em;
+   }
+   }
     </style>
 </head>
 <body>
@@ -112,7 +136,7 @@ if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg
 
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
-  $text= "Sorry, your file was not uploaded.";
+  $text= "Please upload a file";
 // if everything is ok, try to upload file
 } else {
   if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
