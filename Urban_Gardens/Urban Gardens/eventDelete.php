@@ -93,8 +93,20 @@ body{
 }
 
   @media screen and (max-width: 1024px) {
-  body{width: 93.5%;}
+  body{width: 99%;}
+    .navbar {display: none;}
   }
+  
+  @media screen and (max-width: 550px) {
+  body{width: 100%;}
+  input {width: 90%;}
+  }
+  
+   @media screen and (max-width: 290px) {
+   .navbar-brand {
+   font-size: 1.2em;
+   }
+   }
 </style>
 	
 
