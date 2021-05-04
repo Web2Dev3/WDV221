@@ -111,6 +111,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         .wrapper{ width: 350px; padding: 20px;}
         .btn{background-color: coral; border: orange;}
         .btn:hover{background-color: firebrick;}
+	    
+	 @media screen and (max-width: 290px) {
+  		 .navbar-brand {
+  		 font-size: 1.1em;
+   		}
+  	 }
     </style>
 </head>
 <body>
@@ -119,7 +125,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 	<img  style="max-width: 70px; max-height: 80px; border: none;"  src="images/urban-logo.png" alt="logo for company" width="45" class="img-responsive">Urban Gardens Admin</a>
 </div>
 <div class="col-sm-12" style="display: flex; justify-content: center;">
-    <div class="wrapper">
+    <div class="wrapper" style="margin-bottom: 20%;">
         <h2 style="color:white; font-weight:bold;">Login</h2>
         <p>Please fill in your credentials to login.</p>
         <form class="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
